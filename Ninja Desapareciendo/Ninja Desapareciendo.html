@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+	/*//TODO EL CSS AQUI*/
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.ninja{
+		display: inline-block;
+	}
+
+	img{
+		width: 250px;
+		height: 200px;
+		border: 1px solid black;
+	}
+	button{
+		margin-left: 450px;
+		width: 200px;
+		height: 50px;
+		background-color: green;
+		border-radius: 10px;
+	}
+	</style>
+	<meta charset="utf-8">
+	<title>Ninja Desapareciendo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//TODO EL JQUERY AQUI
+	$(document).ready(function(){
+		$('.ninja img').click(function(){
+		$(this).hide('slow');
+		})
+
+	$('button').click(function(){
+		$('img').show();
+	})
+	})
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="ninja">
+			<img src="./ninja.png">
+		</div>
+		<div class="ninja"><img src="./ninja.png"></div>
+		<div class="ninja"><img src="./ninja.png"></div>
+		<div class="ninja"><img src="./ninja.png"></div><br>
+		<div class="ninja"><img src="./ninja.png"></div>
+		<div class="ninja"><img src="./ninja.png"></div>
+		<div class="ninja"><img src="./ninja.png"></div>
+		<div class="ninja"><img src="./ninja.png"></div><br>
+		<button class="restaurar">Hazlo denuevo!</button>
+	</div>
+
+</body>
+</html>
