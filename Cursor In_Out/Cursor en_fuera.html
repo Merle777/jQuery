@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*{
+
+		}
+
+		.foto{
+			display: inline-block;
+			width: 250px;
+			min-height: 50px;
+			margin-right: 3px;
+		}
+
+		img{
+			width: 250px;
+			border: 1px solid black;
+		}
+
+
+
+	</style>
+	<meta charset="utf-8">
+	<title>Cursor in/out</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('img').hover(function(){
+				var temp= $(this).attr('src');
+				$(this).attr('src',$(this).attr('data-alt-src'));
+				$(this).attr('data-alt-src', temp);
+
+			});
+
+		})
+
+
+	</script>
+</head>
+<body>
+	<div class='row'>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+	</div>
+	<div class='row'>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+		<div class='foto'><img src="bob1.jpg" data-alt-src='bob2.jpg'></div>
+	</div>
+
+</body>
+</html>
